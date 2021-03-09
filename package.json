@@ -1,0 +1,34 @@
+{
+  "name": "vite-electron-typescript-template",
+  "version": "0.0.0",
+  "main": "dist/main/app.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "electron:dev": "NODE_ENV=development electron index.js",
+    "electron:build": "vite build && tsc -p tsconfig.electron.json --outDir dist/main && electron-builder"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "cross-env": "^7.0.3",
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
+    "vite": "^2.0.5"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "files": [
+      "dist/**/*"
+    ]
+  }
+}
