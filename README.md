@@ -1,4 +1,18 @@
 # Vite Electron Typescript Template
 
+`vite 2` `vue 3` `electron 12`
 
-[doc](https://hocili.blog/vite-electron-typescript.html)
+## dev
+
+```shell
+yarn dev
+```
+
+```shell
+yarn electron:dev
+```
+## build
+
+```shell
+yarn electron:build
+```
