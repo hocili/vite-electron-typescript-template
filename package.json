@@ -29,6 +29,9 @@
     },
     "files": [
       "dist/**/*"
-    ]
+    ],
+    "directories": {
+      "output": "dist/release"
+    }
   }
 }
