@@ -6,8 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "electron:dev": "NODE_ENV=development electron index.js",
-    "electron:build": "vite build && tsc -p tsconfig.electron.json --outDir dist/main && electron-builder"
+    "electron:dev": "cross-env NODE_ENV=development electron index.js",
+    "electron:build": "rm -rf dist && vite build && tsc -p tsconfig.electron.json && electron-builder"
   },
   "dependencies": {
     "vue": "^3.0.5"
@@ -28,7 +28,8 @@
       "category": "your.app.category.type"
     },
     "files": [
-      "dist/**/*"
+      "dist/main/**/*",
+      "dist/render/**/*"
     ],
     "directories": {
       "output": "dist/release"

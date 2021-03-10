@@ -5,9 +5,12 @@
     "moduleResolution": "node",
     "strict": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": true,
+    "outDir": "dist/main"
   },
   "include": [
-    "src/main/app.ts"
+    "src/main/app.ts",
+    "src/main/preload.js",
   ]
 }
