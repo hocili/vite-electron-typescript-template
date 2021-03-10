@@ -7,7 +7,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "electron:dev": "cross-env NODE_ENV=development electron index.js",
-    "electron:build": "rm -rf dist && vite build && tsc -p tsconfig.electron.json && electron-builder"
+    "electron:build": "vite build && tsc -p tsconfig.electron.json && electron-builder"
   },
   "dependencies": {
     "vue": "^3.0.5"
